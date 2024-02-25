@@ -2,7 +2,8 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var data = ReadData()
-    
+    @State private var searchText = ""
+
     var body: some View {
             Section {
                 NavigationStack {
@@ -46,7 +47,7 @@ struct ContentView: View {
                             }
                         }
                     }.navigationTitle("Periodic Table")
-                }
+                }.accentColor(.white)
             }
     }
 }
